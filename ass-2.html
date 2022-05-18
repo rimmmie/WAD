@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Page</title>
+</head>
+<style>
+    .a {
+        width: 400px;
+        border: 15px solid rgb(204, 199, 209);
+        box-shadow: inset 4px 4px 4px 4px grey;
+        padding: 50px;
+        margin: 50px;
+        background: whitesmoke;
+        text-align: left;
+
+
+    }
+
+    div {
+
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    input {
+        padding: 5px;
+        margin-left: 10px;
+        outline: none;
+        width: 100%;
+    }
+
+    label {
+        justify-content: flex-end;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1> Registration </h1>
+        <p> To create an account please fill the registration form</p>
+        <hr>
+
+
+        <label for="Name"><b> Name </b></label>
+        <input type="text" placeholder="enter a name" name="Name" id="nameid">
+
+
+        <label for="Email"><b> Email </b></label>
+        <input type="text" placeholder="enter a email" name="email" id="emailid">
+        <label for="Password"><b> Password </b></label>
+        <input type="text" placeholder="enter a password" name="password" id="passwordid">
+        <label for="Repeat Password"><b> Repeat Password</b></label>
+        <input type="text" placeholder="enter a repeat password" name="repeat password" id="repeatpasswordid">
+        <hr>
+
+        <p> By creating a form you have to follow <a href="#"> Terms and Conditions </a></p>
+        <button type="button" onclick="lstorage()"> Register </button>
+
+
+
+
+
+
+
+    </div>
+    <div class="containersignin">
+        <p>Already have an account? <a href="#"> Sign in </a></p>
+    </div>
+
+
+
+</body>
+<script>
+    lstorage();
+    function lstorage() {
+
+        var name = document.getelementById("name").value;
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var repeatpassword = document.getElementById("repeatpassword").value;
+        console.log(Name, email, password, repeatpassword)
+        localStorage.setItem("name", name)
+        localStorage.setItem("email", email)
+        localStorage.setItem("password", password)
+        localStorage.setItem("repeatpassword", repeatpassword)
+    }
+</script>
+
+</html>
